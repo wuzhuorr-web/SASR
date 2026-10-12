@@ -1,0 +1,15 @@
+<div class="preview-note">
+  DESIGN PREVIEW{' '}
+  <span>
+    Service descriptions and business details are awaiting confirmation.
+  </span>
+  <button type="button" aria-label="Dismiss preview notice">
+    ×
+  </button>
+</div>
+<script>
+  const notice = document.querySelector('.preview-note');
+  notice
+    ?.querySelector('button')
+    ?.addEventListener('click', () => notice.remove());
+</script>

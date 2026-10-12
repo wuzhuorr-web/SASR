@@ -1,0 +1,74 @@
+---
+import { site } from '../data/site';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MapLink from '../components/MapLink.astro';
+import CopyAddress from '../components/CopyAddress.astro';
+---
+
+<SiteLayout
+  title="Contact and location | Stewart & Armstrong"
+  description={`Find Stewart and Armstrong Smash Repairs at ${site.address}.`}
+  activePath="/contact.html"
+>
+  <div class="page-heading container">
+    <h1>
+      Let’s talk about
+      <br />
+      your car.
+    </h1>
+    <p>Visit our workshop on High Street in Chatswood.</p>
+  </div>
+  <section class="container visit-layout">
+    <div class="visit-photo">
+      <img
+        src="/images/location.jpg"
+        alt="Stewart and Armstrong Smash Repairs storefront, viewed from High Street"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="visit-info">
+      <h2>Visit the workshop.</h2>
+      <address>
+        {site.street}
+        <br />
+        {site.locality}
+      </address>
+      <div class="visit-actions">
+        <MapLink class="button" />
+        <CopyAddress />
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+      <dl class="contact-details">
+        <div>
+          <dt>Phone &amp; email</dt>
+          <dd>Details to be confirmed.</dd>
+        </div>
+        <div>
+          <dt>Opening hours</dt>
+          <dd>Hours to be confirmed.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container editorial">
+      <h2>
+        A little preparation
+        <br />
+        helps.
+      </h2>
+      <div>
+        <p>
+          Have your vehicle make and model ready, along with a short description
+          of what happened. Photos can help explain the affected areas.
+        </p>
+        <p>
+          Repair scope, pricing and timing can then be discussed with the team.
+        </p>
+        <a class="inline-link" href="/services.html">
+          Explore repair services
+        </a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

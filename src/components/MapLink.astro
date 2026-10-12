@@ -1,0 +1,17 @@
+---
+import { site } from '../data/site';
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<a
+  class={className}
+  href={site.mapsUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open in Google Maps (opens in a new tab)"
+>
+  Open in Google Maps
+</a>

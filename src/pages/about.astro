@@ -1,0 +1,93 @@
+---
+import { site } from '../data/site';
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="About our workshop | Stewart & Armstrong"
+  description="Take a look inside Stewart and Armstrong Smash Repairs in Chatswood."
+  activePath="/about.html"
+>
+  <div class="page-heading container">
+    <h1>
+      A local workshop.
+      <br />A considered approach.
+    </h1>
+    <p>Stewart &amp; Armstrong Smash Repairs, on High Street in Chatswood.</p>
+  </div>
+  <div class="container wide-photo">
+    <img
+      src="/images/workshop.jpg"
+      alt="Inside the Stewart and Armstrong workshop, with vehicles in the repair area"
+      fetchpriority="high"
+    />
+  </div>
+  <section class="section">
+    <div class="container editorial">
+      <h2>
+        The work behind
+        <br />
+        the finish.
+      </h2>
+      <div>
+        <p>
+          Repair work brings together several stages: looking at the damage,
+          preparing the panels and attending to the paint finish.
+        </p>
+        <p>
+          Our workshop photographs show that process up close — masking adjacent
+          surfaces, preparing bodywork and comparing paint colours.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section soft-section">
+    <div class="container craft-layout">
+      <div class="portrait-photo">
+        <img
+          src="/images/craft.jpg"
+          alt="A technician working carefully on a masked white vehicle panel"
+          loading="lazy"
+        />
+      </div>
+      <div class="craft-copy">
+        <h2>
+          Attention where
+          <br />
+          it matters.
+        </h2>
+        <dl class="practice-list">
+          <div>
+            <dt>Surface preparation</dt>
+            <dd>
+              Preparing the area that needs work before refinishing begins.
+            </dd>
+          </div>
+          <div>
+            <dt>Careful masking</dt>
+            <dd>
+              Covering adjacent panels and surfaces during paint preparation.
+            </dd>
+          </div>
+          <div>
+            <dt>Colour checks</dt>
+            <dd>Comparing paint samples with the vehicle’s existing finish.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container editorial">
+      <h2>Find us in Chatswood.</h2>
+      <div>
+        <p>
+          Our workshop is at {site.street}, {site.locality}.
+        </p>
+        <a class="inline-link" href="/contact.html">
+          Plan your visit
+        </a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

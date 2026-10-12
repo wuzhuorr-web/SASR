@@ -1,0 +1,11 @@
+---
+import { site } from '../data/site';
+---
+
+<button class="copy-address" type="button" data-address={site.address}>
+  Copy address
+</button>
+<script>
+  import { initCopyAddress } from '../scripts/copy-address';
+  initCopyAddress();
+</script>

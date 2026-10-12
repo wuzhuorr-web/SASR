@@ -1,0 +1,18 @@
+---
+import { site } from '../data/site';
+---
+
+<footer>
+  <div class="container footer-layout">
+    <a class="footer-brand" href="/">
+      {site.name}
+    </a>
+    <span>
+      © <span id="year">{new Date().getFullYear()}</span>
+    </span>
+  </div>
+</footer>
+<script>
+  const year = document.querySelector('#year');
+  if (year) year.textContent = String(new Date().getFullYear());
+</script>

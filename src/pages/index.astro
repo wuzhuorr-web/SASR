@@ -1,0 +1,123 @@
+---
+import { site } from '../data/site';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MapLink from '../components/MapLink.astro';
+import ServiceGrid from '../components/ServiceGrid.astro';
+---
+
+<SiteLayout
+  title="Stewart & Armstrong | Smash Repairs, Chatswood"
+  description="Meet Stewart and Armstrong Smash Repairs at {site.street}, Chatswood. Explore our workshop and get in touch about your vehicle."
+  activePath="/"
+>
+  <section class="hero" id="home">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <h1>
+          <span class="slogan">
+            <em>Care</em> <span>in every detail.</span>
+          </span>{' '}
+          <span class="slogan">
+            <em>Confidence</em> <span>in every repair.</span>
+          </span>
+        </h1>
+        <p class="intro">
+          Smash repairs, bodywork and refinishing in Chatswood.
+        </p>
+        <aside class="location-card" aria-label="Workshop location">
+          <address>
+            {site.street} <span>{site.locality}</span>
+          </address>
+          <MapLink />
+        </aside>
+      </div>
+      <div class="hero-photo">
+        <img
+          src="/images/craft.jpg"
+          alt="A technician carefully working on a masked vehicle panel in the workshop"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <h2>Smash repair services.</h2>
+        </div>
+      </div>
+      <ServiceGrid />
+    </div>
+  </section>
+  <section class="about section" id="about">
+    <div class="container about-layout">
+      <div class="about-image">
+        <img
+          src="/images/workshop.jpg"
+          alt="A view into our local Chatswood workshop"
+          loading="lazy"
+        />
+      </div>
+      <div class="about-copy">
+        <h2>Inside our workshop.</h2>
+        <p>
+          Panel preparation, careful masking and paint colour checks — a look at
+          the work behind each finish, here on High Street.
+        </p>
+        <a class="inline-link" href="/about.html">
+          Inside the workshop
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="process section">
+    <div class="container">
+      <div class="section-top">
+        <div>
+          <h2>Your next steps.</h2>
+        </div>
+      </div>
+      <ol class="steps">
+        <li>
+          <span>01</span>
+          <h3>Get in touch</h3>
+          <p>Tell us what happened and what needs attention.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Assess the repair</h3>
+          <p>Discuss the damage and the work required.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Make a plan</h3>
+          <p>Agree on the next steps with the team.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="container contact-layout">
+      <div class="contact-copy">
+        <h2>Visit our Chatswood workshop.</h2>
+        <p>
+          {site.street}
+          <br /> {site.locality}
+        </p>
+        <MapLink class="button light" />
+        <div class="contact-pending">
+          <p>Phone, email and opening hours to be confirmed.</p>
+        </div>
+      </div>
+      <div class="contact-image">
+        <img
+          src="/images/location.jpg"
+          alt="Stewart and Armstrong Smash Repairs storefront on High Street"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+</SiteLayout>

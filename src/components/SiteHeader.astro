@@ -1,0 +1,37 @@
+---
+import { navigation } from '../data/site';
+interface Props {
+  activePath: string;
+}
+const { activePath } = Astro.props;
+---
+
+<header class="header">
+  <div class="container header-layout">
+    <a class="brand" href="/" aria-label="Stewart and Armstrong home">
+      <span class="monogram" aria-hidden="true">
+        S<span>A</span>
+      </span>
+      <span class="wordmark">
+        STEWART & ARMSTRONG<small>SMASH REPAIRS · CHATSWOOD</small>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">
+      Menu <span>＋</span>
+    </button>
+    <nav id="nav" aria-label="Main navigation">
+      {navigation.map(({ href, label }) => (
+        <a href={href} aria-current={activePath === href ? 'page' : undefined}>
+          {label}
+        </a>
+      ))}
+    </nav>
+    <a class="header-cta" href="/contact.html">
+      Contact us
+    </a>
+  </div>
+</header>
+<script>
+  import { initNavigation } from '../scripts/navigation';
+  initNavigation();
+</script>

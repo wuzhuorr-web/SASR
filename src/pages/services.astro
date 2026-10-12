@@ -1,0 +1,127 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="Smash repair services | Stewart & Armstrong"
+  description="Explore body repairs, paint and refinishing, and repair assessment at Stewart and Armstrong."
+  activePath="/services.html"
+>
+  <div class="page-heading container">
+    <h1>
+      Repairs, from panel
+      <br />
+      to paint.
+    </h1>
+    <p>Tell us what needs attention. We’ll talk through the work with you.</p>
+  </div>
+  <section class="service-detail container" id="body-repairs">
+    <div class="detail-photo">
+      <img
+        src="/images/bodywork.jpg"
+        alt="A masked rear body panel ready for paintwork"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="detail-copy">
+      <h2>Body repairs.</h2>
+      <p>
+        For damaged bodywork and panels that need attention. The starting point
+        is a closer look at the affected area and the work involved.
+      </p>
+      <ul class="plain-list">
+        <li>Damaged panels and bodywork</li>
+        <li>Panel preparation before refinishing</li>
+        <li>Repair scope discussed after assessment</li>
+      </ul>
+      <a class="inline-link" href="/contact.html">
+        Discuss body repairs
+      </a>
+    </div>
+  </section>
+  <section class="service-detail container reverse" id="paint">
+    <div class="detail-photo">
+      <img
+        src="/images/paint.jpg"
+        alt="Red paint samples compared with the vehicle paint finish"
+        loading="lazy"
+      />
+    </div>
+    <div class="detail-copy">
+      <h2>Paint &amp; refinishing.</h2>
+      <p>
+        Preparation, colour and finish are part of the same job. The work begins
+        with the surface and continues through to the final appearance.
+      </p>
+      <ul class="plain-list">
+        <li>Surface preparation and masking</li>
+        <li>Paint colour comparison</li>
+        <li>Refinishing the repair area</li>
+      </ul>
+      <a class="inline-link" href="/contact.html">
+        Discuss paintwork
+      </a>
+    </div>
+  </section>
+  <section class="service-detail container" id="assessment">
+    <div class="detail-photo">
+      <img
+        src="/images/workshop.jpg"
+        alt="Vehicles inside our Chatswood repair workshop"
+        loading="lazy"
+      />
+    </div>
+    <div class="detail-copy">
+      <h2>Repair assessment.</h2>
+      <p>
+        Not sure what your car needs? Start by explaining what happened. An
+        assessment helps establish the repair scope before arrangements are
+        made.
+      </p>
+      <ul class="plain-list">
+        <li>Describe the damage and how it happened</li>
+        <li>Have your vehicle make and model ready</li>
+        <li>Discuss the next steps with the team</li>
+      </ul>
+      <a class="inline-link" href="/contact.html">
+        Contact the workshop
+      </a>
+    </div>
+  </section>
+  <section class="section soft-section">
+    <div class="container faq-layout">
+      <h2>Before you start.</h2>
+      <div class="faq">
+        <details>
+          <summary>What information should I have ready?</summary>
+          <p>
+            Your vehicle’s make and model, a brief description of the damage and
+            any relevant photographs are useful starting points.
+          </p>
+        </details>
+        <details>
+          <summary>Can you confirm a price from a photograph?</summary>
+          <p>
+            A photograph may help explain the damage, but repair scope and cost
+            need to be confirmed with the workshop after assessment.
+          </p>
+        </details>
+        <details>
+          <summary>How long will the repair take?</summary>
+          <p>
+            Timing depends on the work required and any parts needed. Ask the
+            team about availability and an estimated timeframe for your vehicle.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container end-cta">
+      <h2>Let’s talk about your repair.</h2>
+      <a class="button" href="/contact.html">
+        Contact us
+      </a>
+    </div>
+  </section>
+</SiteLayout>
